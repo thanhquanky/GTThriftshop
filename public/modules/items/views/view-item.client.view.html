@@ -1,6 +1,9 @@
 <section data-ng-controller="ItemsController" data-ng-init="findOne()">
 	<div class="page-header">
-		<h1 data-ng-bind="item.name"></h1>
+		<h1>{{item.name}}</h1>
+	</div>
+	<div class="center-block">
+		<p data-ng-bind="item.description"></p>
 	</div>
 	<div class="pull-right" data-ng-show="authentication.user._id == item.user._id">
 		<a class="btn btn-primary" href="/#!/items/{{item._id}}/edit">
