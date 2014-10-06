@@ -9,7 +9,9 @@ angular.module('items').controller('ItemsController', ['$scope', '$stateParams',
 		$scope.create = function() {
 			// Create new Item object
 			var item = new Items ({
-				name: this.name
+				name: this.name,
+				description: this.description,
+				price: this.price
 			});
 
 			// Redirect after save
@@ -57,7 +59,7 @@ angular.module('items').controller('ItemsController', ['$scope', '$stateParams',
 
 		// Find existing Item
 		$scope.findOne = function() {
-			$scope.item = Items.get({ 
+			$scope.item = Items.get({
 				itemId: $stateParams.itemId
 			});
 		};

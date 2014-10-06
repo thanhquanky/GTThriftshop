@@ -30,6 +30,10 @@ module.exports = {
 		clientSecret: process.env.GITHUB_SECRET || 'APP_SECRET',
 		callbackURL: 'http://localhost:3000/auth/github/callback'
 	},
+	gatech: {
+		ssoBaseURL: 'https://login.gatech.edu/cas/login',
+		serverBaseURL: 'http://localhost:3000/auth/gatech/callback'
+	},
 	mailer: {
 		from: process.env.MAILER_FROM || 'MAILER_FROM',
 		options: {

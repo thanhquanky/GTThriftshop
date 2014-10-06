@@ -20,6 +20,16 @@ var ItemSchema = new Schema({
 		type: Date,
 		default: Date.now
 	},
+	description: {
+		type: String,
+		default: '',
+		required: 'Please fill Item description',
+		trim: true
+	},
+	price: {
+		type: Number,
+		default: 0
+	},
 	user: {
 		type: Schema.ObjectId,
 		ref: 'User'
