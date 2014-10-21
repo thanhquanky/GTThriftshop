@@ -13,3 +13,5 @@
 .ng-valid.ng-dirty{
     border-color:#78FA89;
 }
+
+.bottom-buffer { margin-bottom: 10px}

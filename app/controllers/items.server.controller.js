@@ -72,7 +72,7 @@ exports.delete = function(req, res) {
 /**
  * List of Items
  */
-exports.list = function(req, res) { Item.find().sort('-created').populate('user', 'displayName').exec(function(err, items) {
+exports.list = function(req, res) { Item.find().sort('-created').populate('user', 'email').exec(function(err, items) {
 		if (err) {
 			return res.status(400).send({
 				message: errorHandler.getErrorMessage(err)
@@ -86,7 +86,7 @@ exports.list = function(req, res) { Item.find().sort('-created').populate('user'
 /**
  * Item middleware
  */
-exports.itemByID = function(req, res, next, id) { Item.findById(id).populate('user', 'displayName').exec(function(err, item) {
+exports.itemByID = function(req, res, next, id) { Item.findById(id).populate('user', 'email').exec(function(err, item) {
 		if (err) return next(err);
 		if (! item) return next(new Error('Failed to load Item ' + id));
 		req.item = item ;

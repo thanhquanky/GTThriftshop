@@ -13,19 +13,18 @@
         <a data-ng-click="filters.category = ''">Clear Filter</a></pre>
     </div>
     <div class="list-group">
-        <a data-ng-repeat="item in items | filter:filters | filter:query | filter: priceFilter" data-ng-href="#!/items/{{item._id}}" class="list-group-item">
-          <span class="badge">{{item.price | currency}}</span>
+        <a data-ng-repeat="item in items | filter:filters | filter:query | filter: priceFilter | filter: userFilter" data-ng-href="#!/items/{{item._id}}" class="list-group-item">
+            <span class="badge">{{item.price | currency}}</span>
             <small class="list-group-item-text">
-			            <!--Posted on
-		              <span data-ng-bind="item.created | date:'medium'"></span>
-		              by
-		              <span data-ng-bind="item.user.displayName"></span>-->
+              <!---by
+              <span data-ng-bind="item.user.displayName"></span>-->
             </small>
             <h4 class="list-group-item-heading" data-ng-bind="item.name"></h4>
             <p>{{item.description}}</p>
+            Posted: <span data-ng-bind="item.created | date:'medium'"></span>
         </a>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!items.$resolved || items.length">
-    	No Items yet, why don't you <a href="/#!/items/create">create one</a>?
+        No Items yet, why don't you <a href="/#!/items/create">create one</a>?
     </div>
 </section>

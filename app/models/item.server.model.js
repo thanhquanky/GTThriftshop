@@ -31,9 +31,13 @@ var ItemSchema = new Schema({
 		default: 0
 	},
 	user: {
-		type: Schema.ObjectId,
-		ref: 'User'
-	}
+        type: Schema.ObjectId,
+        ref: 'User'
+    },
+    category: {
+        type: String,
+        default: ''
+    }
 });
 
 mongoose.model('Item', ItemSchema);

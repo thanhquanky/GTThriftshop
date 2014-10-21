@@ -11,7 +11,8 @@ angular.module('items').controller('ItemsController', ['$scope', '$stateParams',
 			var item = new Items ({
 				name: this.name,
 				description: this.description,
-				price: this.price
+				price: this.price,
+                category: this.category
 			});
 
 			// Redirect after save
@@ -63,5 +64,21 @@ angular.module('items').controller('ItemsController', ['$scope', '$stateParams',
 				itemId: $stateParams.itemId
 			});
 		};
-	}
+
+        $scope.filters = { };
+
+        $scope.categories = ['Electronics', 'Fashion', 'Entertainment', 'Sporting Goods', 'Motors', 'Home and Kitchen', 'Other'];
+        $scope.category = $scope.categories[0]; // red
+
+        $scope.minPrice = 0;
+        $scope.maxPrice = 9999999999;
+
+        $scope.priceFilter = function(item){
+            return item.price >= $scope.minPrice  && item.price <= $scope.maxPrice;
+        }
+
+        $scope.userFilter = function(item){
+            return item.user._id == $scope.authentication.user._id;
+        }
+    }
 ]);

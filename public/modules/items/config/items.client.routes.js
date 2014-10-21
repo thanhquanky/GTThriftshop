@@ -20,6 +20,10 @@ angular.module('items').config(['$stateProvider',
 		state('editItem', {
 			url: '/items/:itemId/edit',
 			templateUrl: 'modules/items/views/edit-item.client.view.html'
-		});
+		}).
+        state('listMyItems', {
+            url: '/myItems',
+            templateUrl: 'modules/items/views/list-myItems.client.view.html'
+        });
 	}
 ]);

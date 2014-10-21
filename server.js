@@ -12,7 +12,7 @@ var init = require('./config/init')(),
  */
 
 // Bootstrap db connection
-var db = mongoose.connect(config.db, function(err) {
+var db = mongoose.connect('mongodb://54.86.116.203:27017/the-thriftshop-dev', function(err) {
 	if (err) {
 		console.error('\x1b[31m', 'Could not connect to MongoDB!');
 		console.log(err);
