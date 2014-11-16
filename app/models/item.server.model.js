@@ -31,13 +31,18 @@ var ItemSchema = new Schema({
 		default: 0
 	},
 	user: {
-        type: Schema.ObjectId,
-        ref: 'User'
-    },
-    category: {
-        type: String,
-        default: ''
-    }
+        	type: Schema.ObjectId,
+        	ref: 'User'
+    	},
+	category: {
+        	type: String,
+        	default: ''
+    	},
+	image:{
+		type:String,
+		default:''
+	}
+	
 });
 
 mongoose.model('Item', ItemSchema);

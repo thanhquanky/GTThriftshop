@@ -12,7 +12,8 @@ angular.module('items').controller('ItemsController', ['$scope', '$stateParams',
 				name: this.name,
 				description: this.description,
 				price: this.price,
-                category: this.category
+		                category: this.category,
+				image: this.myimage.data
 			});
 
 			// Redirect after save
