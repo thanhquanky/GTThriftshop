@@ -13,7 +13,7 @@ angular.module('items').controller('ItemsController', ['$scope', '$stateParams',
 				description: this.description,
 				price: this.price,
 		                category: this.category,
-				image: this.myimage.data
+				image: this.image.data
 			});
 
 			// Redirect after save
