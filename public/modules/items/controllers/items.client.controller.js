@@ -13,7 +13,7 @@ angular.module('items').controller('ItemsController', ['$scope', '$stateParams',
 				description: this.description,
 				price: this.price,
 		                category: this.category,
-				image: this.image
+				image: $scope.myimage.data
 			});
 
 			// Redirect after save
@@ -70,7 +70,6 @@ angular.module('items').controller('ItemsController', ['$scope', '$stateParams',
 
         $scope.categories = ['Electronics', 'Fashion', 'Entertainment', 'Sporting Goods', 'Motors', 'Home and Kitchen', 'Other'];
         $scope.category = $scope.categories[0]; // red
-	$scope.image=$scope.myimage.data
         $scope.minPrice = 0;
         $scope.maxPrice = 9999999999;
 
