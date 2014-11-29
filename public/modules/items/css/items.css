@@ -4,4 +4,7 @@
 
 .top-buffer { margin-top:20px; }
 
-.center-block {align-content: center;}
+.center-block {
+    align-items: center;
+    display: table;
+}
