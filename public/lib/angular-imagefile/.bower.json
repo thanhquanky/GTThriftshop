@@ -1,0 +1,34 @@
+{
+  "name": "angular-imagefile",
+  "homepage": "https://github.com/jsanchesleao/angular-imagefile",
+  "authors": [
+    "jeferson.leao <jeferson.leao@ideais.com.br>"
+  ],
+  "description": "Image File directives for angularjs",
+  "main": "dist/angular-imagefile.min.js",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "image",
+    "upload",
+    "base64"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "59f2e4aa94",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "59f2e4aa943fcad060a79454bdb07b1a29565d5e"
+  },
+  "_source": "git://github.com/jsanchesleao/angular-imagefile.git",
+  "_target": "*",
+  "_originalSource": "angular-imagefile",
+  "_direct": true
+}
