@@ -1,28 +1,30 @@
 <section data-ng-controller="ItemsController" data-ng-init="findOne()">
-	<div class="page-header">
-		<h1>{{item.name}}</h1>
-	</div>
-	<div class="center-block">
-		<p>Description: {{item.description}}</p>
-        <p>Price: ${{item.price}}</p>
-	<img ng-src="{{item.image}}"  class="display-img" />
-        <p>Contact Info:</p>
-        <ul>
-            <li>Email: {{item.user.email}}</li>
-        </ul>
-	</div>
-	<div class="pull-right" data-ng-show="authentication.user._id == item.user._id">
-		<a class="btn btn-primary" href="/#!/items/{{item._id}}/edit">
-			<i class="glyphicon glyphicon-edit"></i>
-		</a>
-		<a class="btn btn-primary" data-ng-click="remove();">
-			<i class="glyphicon glyphicon-trash"></i>
-		</a>
-	</div>
-	<small>
-		<em class="text-muted">
-			Posted on
-			<span data-ng-bind="item.created | date:'mediumDate'"></span>
-		</em>
-	</small>
+    <div>
+        <div class="page-header">
+            <h1>{{item.name}}</h1>
+        </div>
+        <div class="center-block">
+            <p>Description: {{item.description}}</p>
+            <p>Price: ${{item.price}}</p>
+            <img ng-src="{{item.image}}"  class="display-img" />
+            <p>Contact Info:</p>
+            <ul>
+                <li>Email: {{item.user.email}}</li>
+            </ul>
+        </div>
+        <div class="pull-right" data-ng-show="authentication.user._id == item.user._id">
+            <a class="btn btn-primary" href="/#!/items/{{item._id}}/edit">
+                <i class="glyphicon glyphicon-edit"></i>
+            </a>
+            <a class="btn btn-primary" data-ng-click="remove();">
+                <i class="glyphicon glyphicon-trash"></i>
+            </a>
+        </div>
+        <small>
+            <em class="text-muted">
+                Posted on
+                <span data-ng-bind="item.created | date:'mediumDate'"></span>
+            </em>
+        </small>
+    </div>
 </section>
