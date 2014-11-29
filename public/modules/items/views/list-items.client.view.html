@@ -1,14 +1,8 @@
 <section data-ng-controller="ItemsController" data-ng-init="find()">
-    <div class="page-header">
-        <h1>Items for sale!</h1>
-    </div>
-    <div class="left bottom-buffer"><input ng-model="query" size="15px" placeholder="Search">
+    <div class="left top-buffer bottom-buffer"><input ng-model="query" class="search" placeholder="Search">
         <slider floor="100" ceiling="1000" step="50" precision="2" ng-model="minPrice"></slider>
         <div class="btn-group category-filter-grp" data-ng-class="{open: open}">
-            <button class="btn" data-ng-click="open=!open">Filter by Category</button>
-            <button class="btn dropdown-toggle" data-ng-click="open=!open"><span class="caret"></span>
-
-            </button>
+            <button class="btn category-btn" data-ng-click="open=!open">Filter by Category</button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
                 <li data-ng-repeat="category in categories"> <a data-ng-click="filters.category = category">{{category}}</a>
                 </li>
@@ -17,17 +11,16 @@
         </div>
     </div>
     <div class="list-group">
-        <a data-ng-repeat="item in items | filter:filters | filter:query | filter: priceFilter" data-ng-href="#!/items/{{item._id}}" class="list-group-item">
-          <span class="badge">{{item.price | currency}}</span>
+        <a data-ng-repeat="item in items | filter:filters | filter:query | filter: priceFilter" data-ng-href="#!/items/{{item._id}}" class="list-group-item item">
             <small class="list-group-item-text">
 			            <!--Posted on
 		              <span data-ng-bind="item.created | date:'medium'"></span>
 		              by
 		              <span data-ng-bind="item.user.displayName"></span>-->
             </small>
-            <h4 class="list-group-item-heading" data-ng-bind="item.name"></h4>
-            <p>{{item.description}}</p>
-	    <img ng-src="{{item.image}}"  class="display-img" />
+            <img class="list-img"  ng-src="{{item.image || defaultImage}}" />
+            <h4 class="list-group-item-heading desc" data-ng-bind="item.name"></h4>
+            <span class="desc">{{item.price | currency}}</span>
         </a>
     </div>
     <div class="alert alert-warning text-center" data-ng-hide="!items.$resolved || items.length">

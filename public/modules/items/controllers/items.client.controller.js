@@ -80,5 +80,7 @@ angular.module('items').controller('ItemsController', ['$scope', '$stateParams',
         $scope.userFilter = function(item){
             return item.user._id == $scope.authentication.user._id;
         }
+
+	$scope.defaultImage = 'modules/items/img/No_image.png';
     }
 ]);

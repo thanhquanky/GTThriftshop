@@ -17,4 +17,38 @@
 
 .category-filter-grp{
     float: right;
+    max-width:40%;
+    border-radius:0!important;
+    margin-right:20px;
+}
+.category-btn{
+    border-radius:0px;
+}
+.search{
+    max-width:40%;
+}
+.item{
+    width: 46%;
+    height: 220px;
+    display:block;
+    float:left;
+    margin:5px;
+    border:0px;
+    background-color:#FFFFFF;
+}
+.list-img{
+    display:block;
+    max-width:90%;
+    width:auto;
+    height:60%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:5px;
+    padding:3px;
+}
+.desc{
+    padding:3px;
+}
+body{
+    background-color: #F0F0F0;!important
 }
