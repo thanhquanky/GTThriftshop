@@ -14,13 +14,13 @@
 		<div class="form-group">
                     <label class="control-label" for="name">Image {{myimage.contentType}}</label>
                     <div class="controls">
-                        <input type="file" imagefile="myimage">
+                        <input type="file" imagefile="myimage" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label" for="name">Description {{myimage.data}}</label>
                     <div class="controls">
-                        <input type="text" data-ng-model="description" id="description" class="form-control" placeholder="Description" required>
+                        <textarea data-ng-model="description" id="description" class="form-control" placeholder="Description" required></textarea>
                     </div>
                 </div>
                 <div class="form-group">
