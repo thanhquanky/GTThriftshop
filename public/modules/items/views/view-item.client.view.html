@@ -1,7 +1,7 @@
 <section data-ng-controller="ItemsController" data-ng-init="findOne()">
     <div>
         <div class="center-block">
-            <img ng-src="{{item.image}}"  class="display-img desc-img" />
+            <img ng-src="{{item.image || defaultImage}}"  class="display-img desc-img" />
         </div>
         <div class="">
             <h1>{{item.name}}</h1>
