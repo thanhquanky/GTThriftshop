@@ -10,7 +10,8 @@
             <hr>
             <p><u>Details</u><br>{{item.description}}</p>
             <hr>
-            <p><u>Contact</u><br>{{item.user.email}}<p>
+            <p ><u>Contact</u><br><span data-ng-show="authentication.user._id != null">{{item.user.email}}</span>
+                <span data-ng-show="authentication.user._id == null" style=""><a href="#!/signin">Login</a> to access</span><p>
             <small>
                 <em class="text-muted">
                     Posted on
