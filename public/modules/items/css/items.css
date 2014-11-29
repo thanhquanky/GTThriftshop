@@ -5,6 +5,12 @@
 .top-buffer { margin-top:20px; }
 
 .center-block {
+    margin-top: 10px;
     align-items: center;
     display: table;
+}
+
+.desc-img{
+    width: 200px;
+    height: 200px;
 }
