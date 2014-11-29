@@ -2,7 +2,7 @@
     <div class="page-header">
         <h1>Items for sale!</h1>
     </div>
-    <div class="left bottom-buffer"><input ng-model="query">
+    <div class="left bottom-buffer"><input ng-model="query" size="15px">
         <slider floor="100" ceiling="1000" step="50" precision="2" ng-model="minPrice"></slider>
         <div class="btn-group category-filter-grp" data-ng-class="{open: open}">
             <button class="btn" data-ng-click="open=!open">Filter by Category</button>
