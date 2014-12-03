@@ -11,6 +11,12 @@
         </div>
     </div>
     <div class="list-group">
+        <a data-ng-repeat="item in items | filter: adFilter | filter:query | filter: priceFilter" data-ng-href="#!/items/{{item._id}}" class="list-group-item item">
+            <span class="badge">Sponsored</span>
+            <img class="list-img"  ng-src="{{item.image || defaultImage}}" />
+            <h4 class="list-group-item-heading desc" data-ng-bind="item.name"></h4>
+            <span class="desc">{{item.price | currency}}</span>
+        </a>
         <a data-ng-repeat="item in items | filter:filters | filter:query | filter: priceFilter" data-ng-href="#!/items/{{item._id}}" class="list-group-item item">
             <small class="list-group-item-text">
 			            <!--Posted on

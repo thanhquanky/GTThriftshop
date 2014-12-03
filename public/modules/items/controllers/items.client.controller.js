@@ -68,7 +68,9 @@ angular.module('items').controller('ItemsController', ['$scope', '$stateParams',
 
         $scope.filters = { };
 
-        $scope.categories = ['Electronics', 'Fashion', 'Entertainment', 'Sporting Goods', 'Motors', 'Home and Kitchen', 'Other'];
+        //$scope.adFilters = {category:'Electronics'};
+
+        $scope.categories = ['Electronics', 'Fashion', 'Entertainment', 'Sporting Goods', 'Motors', 'Home and Kitchen', 'Add', 'Other'];
         $scope.category = $scope.categories[0]; // red
         $scope.minPrice = 0;
         $scope.maxPrice = 9999999999;
@@ -79,6 +81,10 @@ angular.module('items').controller('ItemsController', ['$scope', '$stateParams',
 
         $scope.userFilter = function(item){
             return item.user._id == $scope.authentication.user._id;
+        }
+
+        $scope.adFilter = function(item){
+            return item.category == 'Add';
         }
 
 	$scope.defaultImage = 'modules/items/img/No_image.png';
