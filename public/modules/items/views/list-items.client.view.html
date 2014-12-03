@@ -14,7 +14,7 @@
         <a data-ng-repeat="item in items | filter: adFilter | filter:query | filter: priceFilter" data-ng-href="#!/items/{{item._id}}" class="list-group-item item">
             <span class="badge">Sponsored</span>
             <img class="list-img"  ng-src="{{item.image || defaultImage}}" />
-            <h4 class="list-group-item-heading desc" data-ng-bind="item.name"></h4>
+            <h5 class="list-group-item-heading desc" data-ng-bind="item.name"></h5>
             <span class="desc">{{item.price | currency}}</span>
         </a>
         <a data-ng-repeat="item in items | filter:filters | filter:query | filter: priceFilter" data-ng-href="#!/items/{{item._id}}" class="list-group-item item">
@@ -25,7 +25,7 @@
 		              <span data-ng-bind="item.user.displayName"></span>-->
             </small>
             <img class="list-img"  ng-src="{{item.image || defaultImage}}" />
-            <h4 class="list-group-item-heading desc" data-ng-bind="item.name"></h4>
+            <h5 class="list-group-item-heading desc" data-ng-bind="item.name"></h5>
             <span class="desc">{{item.price | currency}}</span>
         </a>
     </div>
