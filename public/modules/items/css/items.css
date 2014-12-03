@@ -25,7 +25,8 @@
     border-radius:0px;
 }
 .search{
-    max-width:40%;
+    width:48%;
+    height: 34px;
 }
 .item{
     width: 46%;
@@ -38,16 +39,16 @@
 }
 .list-img{
     display:block;
-    max-width:90%;
+    max-width:100%;
     width:auto;
-    height:60%;
+    height:65%;
     margin-left:auto;
     margin-right:auto;
     margin-bottom:5px;
-    padding:3px;
+    padding:1px;
 }
 .desc{
-    padding:3px;
+    padding:1px;
 }
 body{
     background-color: #F0F0F0;!important
